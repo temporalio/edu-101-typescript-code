@@ -18,12 +18,12 @@ next to one another in a sorted list.
 
 The following table provides examples of this pattern:
 
-| Repository Name Examples    | Description of contents
-|-----------------------------|-----------------------------------------------------------------------
-| edu-101-go-content          | Temporal 101 for Go course content
-| edu-101-java-content        | Temporal 101 for Java course content
-| edu-102-typescript-content  | Temporal 102 for Typescript course content
-| edu-201-python-content      | Temporal 201 for Python course content
+| Repository Name Examples      | Description of contents
+|-------------------------------|-----------------------------------------------------------------------
+| `edu-101-go-content`          | Temporal 101 for Go course content
+| `edu-101-java-content`        | Temporal 101 for Java course content
+| `edu-102-typescript-content`  | Temporal 102 for Typescript course content
+| `edu-201-python-content`      | Temporal 201 for Python course content
 
 NOTE: a possible shortcoming of this convention is that it does not distinguish the audience 
 (e.g., developers vs. administrators) or human language (e.g., Spanish or Japanese). However, 
