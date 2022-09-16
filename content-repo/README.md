@@ -67,7 +67,7 @@ localized for Brazilian Portuguese would be in a directory ending in `_pt-br`.
 ## Typical Layout of Course Content Repositories
 
 ```
-  +-- about-this-workshop/         # Holds content related to the intro chapter (which covers objectives, introductions, and logistics)
+  +-- about-this-course/           # Holds content related to the intro chapter (which covers objectives, introductions, and logistics)
   |   |
   |   +-- README.md                # Markdown file that provides a bulleted list of links to all content in this chapter
   |   |
