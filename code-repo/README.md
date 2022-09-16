@@ -1,3 +1,13 @@
+## Visibility of the Code Repository
+The course code repository will be owneed by the Temporal organization
+in GitHub and its visibility must be public (this is a requirement for
+using GitPod to provision the exercise environment). 
+
+Note that the course content repository will be private, as explained
+in the [README.md for that template](../content-repo/README.md), so
+that our LMS remains the portal through which learners use to find, 
+register for, and participate in our training.
+
 ## Naming Convention for Course Code Repositories
 
 Because the course content is distributed independently of the code, we use 
@@ -28,37 +38,41 @@ The following table provides examples of this pattern:
 | `edu-102-typescript-code`  | Temporal 102 for Typescript course code
 | `edu-201-python-code`      | Temporal 201 for Python course code
 
-NOTE: a possible shortcoming of this convention is that it does not distinguish the audience 
-(e.g., developers vs. administrators) or human language (e.g., Spanish or Japanese). However, 
-it's likely sufficient for the foreseeable future and should be easy to extend when required.
+The [README.md for the content repo template](../content-repo/README.md) 
+provides more information about course numbers and future plans for 
+handling translactions/localizations.
 
 
 ## Typical Layout of Course Code Repositories
 
 ```
-  +-- demos/	              # Contains subdirectories with instructions and code for all instructor-led demonstrations
+  +-- demos/	              # Contains subdirectories for any instructor-led demonstrations that involve
+  |   |                       # code that is deployed to the exercise environment.
   |   |
-  |   +-- <shortname>/        # Directory for a demo (with a name such as gitpod-orientation)
-  |   |   |                   # Code used in this demo, if there is any, will also be stored below this directory
-  |   |   +-- README.md       # Markdown file containing step-by-step instructions for performing this demo
-  |   |
-  |   +-- <shortname>/        # Directory for another demo (with a name such as using-web-ui); content follows pattern above
+  |   +-- <demo-slug>/        # Directory containing code used in a specific demo (<demo-slug> is a short descriptive name, 
+  |       |                   # such as 'retry-policy' or 'activity-timeout').  
   |       |
-  |       +-- README.md       # Markdown file containing step-by-step instructions for performing this demo
+  |       +-- README.md       # Markdown file that briefly describes this demo and the files it uses (detailed instructions
+  |                           # for performing the demo are instead stored in the course's content repository, using a 
+  |                           # Markdown file below the relevant <chapter>/assets/instructor-guide/ subdirectory)
   |
   +-- exercises/              # Contains subdirectories with instructions and code for all hands-on exercises
   |   |
-  |   +-- <shortname>/        # Directory for one exercise (named with a short name, such as activity-failure); will also contain demo code, if applicable
+  |   +-- <exercise-slug>/    # Directory for a specific exercise (<exercise-slug> is a short descriptive name, such as 'hello-workflow')
   |       |
   |       +-- practice/       # Code that learner will modify and use during this exercise
   |       |
   |       +-- solution/       # Completed version of this exercise, which the learner may use for hints or comparisons
+  |       |                   # and which the instructor will explain when doing a recap of the exercise
   |       |
   |       +-- README.md       # Markdown file containing step-by-step instructions for performing this exercise
   |
-  +-- samples/                # Contains subdirectories with code samples provided for reference (not part of an exercise or demo)
+  +-- samples/                # Contains subdirectories with code samples provided for reference, such as code shown 
+  |   |                       # in a video. Less commonly, a course may provide sample code related to something that
+  |   |                       # is tangental to the course, thereby providing an opportunity for advanced students to 
+  |   |                       # experiment and instructors to do ad hoc demos during a live workshop.
   |   |
-  |   +-- <shortname>/        # Directory for a demo (with a name such as custom-retry-policy)
+  |   +-- <sample-slug>/      # Directory for a sample (<sample-slug> is a short descriptive name, such as 'dsl-workflow')
   |
   +-- temporal-server/        # Directory containing the Docker configuration files used by GitPod
   |
@@ -70,7 +84,3 @@ it's likely sufficient for the foreseeable future and should be easy to extend w
   |
   +-- README.md               # Top-level index page for the course, containing a link to the code repo and bulleted list of links to each chapter
 ```
-
-
-
-
