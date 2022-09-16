@@ -45,7 +45,7 @@ it's likely sufficient for the foreseeable future and should be easy to extend w
   |   |   |
   |   |   +-- transcripts/       # Contains narration transcripts for all videos in this chapter
   |   |       |
-  |   |       +-- video-01.md    # The narration transcript (in Markdown format) for the first video in this chapter
+  |   |       +-- video-01.md    # The narration transcript (in Markdown format) for the first video in this chapter, as well as production notes
   |   |
   |   +-- images/                # Contains all images that are specific to the intro chapter
   |

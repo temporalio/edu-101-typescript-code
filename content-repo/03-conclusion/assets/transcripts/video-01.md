@@ -6,8 +6,8 @@ files that continue the naming pattern (`video-02.md`, `video-03.md`, etc.).
 
 The top portion of this file may contain additional information about the video
 (such as a description of what it demonstrates, metadata used when publishing
-it, and so on). The narration should follow, in a section with the heading
-"Narration" as seen below.
+it, production notes, and so on). The narration should always be the last
+section of this file and will appear under the "Narration" as seen below.
 
 
 
