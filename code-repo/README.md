@@ -83,4 +83,6 @@ handling translactions/localizations.
   +-- LICENSE                 # MIT license that attributes work to Temporal
   |
   +-- README.md               # Top-level index page for the course, containing a link to the code repo and bulleted list of links to each chapter
+  |
+  +-- style.css               # Customizes style of Markdown content showed in GitPod's preview mode, for better readability
 ```
