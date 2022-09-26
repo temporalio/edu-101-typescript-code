@@ -85,7 +85,7 @@ localized for Brazilian Portuguese would be in a directory ending in `_pt-br`.
   |   |       +-- <video-slug>.md  # Markdown file containing the description, production notes, and transcript for a video in this chapter.
   |   |                            # <video-slug> is a short descriptive name for the video, such as 'worker-config' or 'retry-policy'.
   |   |                            # The course developer will include the transcript for each video, on the same page in which it's
-  |   |                            # embedded into the LMS, below a "Transcript" heading at the end of that page,
+  |   |                            # embedded into the LMS, below a "Video Transcript" heading at the end of that page,
   |   |
   |   |
   |   +-- images/                  # Contains all images that are specific to the intro chapter
