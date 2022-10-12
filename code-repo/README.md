@@ -1,5 +1,5 @@
 ## Visibility of the Code Repository
-The course code repository will be owneed by the Temporal organization
+The course code repository will be owned by the Temporal organization
 in GitHub and its visibility must be public (this is a requirement for
 using GitPod to provision the exercise environment). 
 
