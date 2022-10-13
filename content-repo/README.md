@@ -76,6 +76,8 @@ localized for Brazilian Portuguese would be in a directory ending in `_pt-br`.
   |   | 
   |   +-- assets/                  # Contains files used to produce content for this chapter (e.g., a Keynote file or PSD version of a JPG file exported to images directory)
   |   |   |
+  |   |   +-- questions.md         # Markdown file containing questions and answers for quizzes that appear in this chapter
+  |   |   |
   |   |   +-- instructor-guide/    # Contains instructor guide content this chapter
   |   |   |   |
   |   |   |   +-- README.md        # Markdown file containing instructor guide content for this chapter (if there are other pages, this will link to them)
@@ -99,6 +101,8 @@ localized for Brazilian Portuguese would be in a directory ending in `_pt-br`.
   +-- common/                      # Holds files referenced in or used by multiple chapters
   |   |
   |   +-- assets/                  # Contains files that are used to produce the course content
+  |   |       |
+  |   |       +-- final-exam.md    # Markdown file containing questions and answers for the end-of-course exam / assessment, if this course offers one
   |   |
   |   +-- images/                  # Contains images that are referenced in multiple chapters
   |
