@@ -1,9 +1,7 @@
 {
-    "markdown.styles": ["style.css"]
+    "markdown.styles": ["style.css"],
     "workbench.startupEditor": "none",
     "workbench.editorAssociations": 
-        {
-            "README.md": "vscode.markdown.preview.editor",
-        }
+
 }
 

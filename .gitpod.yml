@@ -56,12 +56,13 @@ ports:
 
 vscode:
   extensions:
+    - typescript.tsdk
     - golang.Go
     - ms-python.python
     - redhat.java
     - vscjava.vscode-java-test
     - vscjava.vscode-java-debug
     - wingrunr21.vscode-ruby
-    - ms-toolsai.jupyter
-    - ms-toolsai.jupyter-keymap
-    - ms-toolsai.jupyter-renderers
+    # - ms-toolsai.jupyter
+    # - ms-toolsai.jupyter-keymap
+    # - ms-toolsai.jupyter-renderers
