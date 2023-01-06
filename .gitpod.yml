@@ -56,7 +56,6 @@ ports:
 
 vscode:
   extensions:
-    - typescript.tsdk
     - golang.Go
     - ms-python.python
     - redhat.java

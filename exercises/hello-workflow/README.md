@@ -1,7 +1,7 @@
 # Exercise 1: Hello Workflow
 During this exercise, you will
 * Set up a new project using the Temporal Package Initializer 
-* Review the business logic of the provided Workflow Definition to understand its behavior
+* Review the business logic of the provided Workflow Definition
 * Modify the Worker initialization code to change a task queue name
 * Run the Worker initialization code to start the Worker process
 * Execute the Workflow from the command line
@@ -12,10 +12,17 @@ You will create and make your changes to the code in the `practice` subdirectory
 1. Download the `hello-world` project using the command:
 
 ```
-$ npx @temporalio/create@latest ./exercises/hello-workflow/practice
+npx @temporalio/create@latest ./exercises/hello-workflow/practice
 ```
 
 You will be prompted to answer a couple of questions. Respond in the following way: 
+
+```
+Need to install the following packages:
+  @temporalio/create@1.5.2
+Ok to proceed? (y)
+y
+```
 
 ```
 Which sample would you like to use?
@@ -29,11 +36,11 @@ N
 
 ## Part B: Review the Workflow Business Logic
 
-1. Open the `activities.ts` file (located in the `practice/src` subdirectory) in the editor and reivew the business logic. 
-2. Open the `workflows.ts` file (located in the `practice/src` subdirectory) in the editor and review the `greet` constant taking note of the Start-to-Close Timeout option. 
+1. Open the `activities.ts` file (located in the `practice/src` subdirectory) in the editor and review the business logic. 
+2. Open the `workflows.ts` file (located in the `practice/src` subdirectory) in the editor and review the `greet` constant. Take special care to look at the Start-to-Close Timeout option. 
 
 
-## Part C: Change a Task Queue Name for the Worker
+## Part C: Change the Task Queue Name for the Worker
 
 1. Open the `worker.ts` file (located in the `practice/src` subdirectory) in the editor
 2. Change the task queue name to `greeting-tasks`
@@ -42,7 +49,7 @@ N
 
 ## Part D: Start the Worker
 
-1. In a terminal window in the environment and change to the `exercises/hello-workflow/practice/src` subdirectory for this exercise
+1. Go to a terminal window in the environment and change to the `exercises/hello-workflow/practice/src` subdirectory for this exercise
 2. Run the following command to start the Worker:
 
 ```
@@ -51,17 +58,15 @@ $ npm run start.watch
 
 ## Part E: Start the Workflow from the Command Line
 
-1. Open another terminal window in the environment 
+1. Open another terminal window in the environment and change to the `exercises/hello-workflow/practice/src` subdirectory. 
 2. Run the following command:
 
 ```
-$ tctl workflow start \
-    --workflow_type example \
-    --taskqueue greeting-tasks \
-    --workflow_id my-first-workflow 
+$ npm run workflow
 ```
 
-Note that this command starts the Workflow, but it does not wait for it to complete.
+This command starts the Workflow, shows the Workflow's unique identifer, and prints the result of the `greeting` Activity. 
+
 
 If you have time, continue with the optional part of the exercise below to see how to view the result using `tctl`.
 
@@ -69,7 +74,7 @@ If you have time, continue with the optional part of the exercise below to see h
 You can run the following command to display the result of a Workflow Execution: 
 
 ```
-tctl workflow show --workflow_id my-first-workflow
+tctl workflow show --workflow_id <workflow_id>
 ```
 
 It is also possible, and often more convenient, to view this information using the Web UI. You will have a chance to do this in the next exercise.
