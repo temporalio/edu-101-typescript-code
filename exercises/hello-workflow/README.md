@@ -1,8 +1,8 @@
 # Exercise 1: Hello Workflow
 During this exercise, you will
-* Set up a new project using the Temporal Package Initializer 
+* Set up a new project using the Temporal Package Initializer
 * Review the business logic of the provided Workflow Definition
-* Modify the Worker initialization code to change a task queue name
+* Modify the Worker initialization code to change the task queue name
 * Run the Worker initialization code to start the Worker process
 * Execute the Workflow from the command line
 
