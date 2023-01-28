@@ -24,11 +24,18 @@ Next, use a separate terminal window to start the Worker:
 $ npm run start.watch
 ```
 
-Finally, use another terminal window to start the Workflow,
-using the supplied code. You can change the name passed to the Activity by updating it in the `src/client.ts` file. 
+Finally, use another terminal window to start the Workflows. You can change the name passed to the greeting in the `src/clients/greeting.ts` file and in farewell in the `src/clients/farewell.ts` file. 
 
+To start the `greeting` workflow, run the command:
+
+```command
+$ npm run greeting
 ```
-$ npm run workflow
+
+To start the `greeting` workflow, run the command:
+
+```command
+$ npm run farewell
 ```
 
 #### This is the end of the demo

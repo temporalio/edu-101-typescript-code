@@ -16,8 +16,7 @@ Directory Name                | Exercise
 ## Instructor-Led Demonstrations
 Directory Name                         | Description
 :------------------------------------- | :----------------------------------------------------------------------------------
-`demos/service-workflow`                | (In progress) [Shows a Workflow that uses a microservice]()
-
+`demos/service-workflow`                | Shows a Workflow that uses a microservice](demos/service-workflow)
 
 
 ## Examples for Self-Study

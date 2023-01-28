@@ -16,7 +16,7 @@ const {getSpanishGreeting} = proxyActivities<typeof activities>({
 //   startToCloseTimeout: '30 seconds',
 // });
 
-export async function greetingWorkflow(name: string): Promise<string> {
+export async function workflowName(name: string): Promise<string> {
   const greeting = await getSpanishGreeting(name);
   return greeting
 }

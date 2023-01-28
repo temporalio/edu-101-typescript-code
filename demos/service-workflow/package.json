@@ -10,7 +10,8 @@
     "dev-server": "nodemon src/server.ts",
     "start": "ts-node src/worker.ts",
     "start.watch": "nodemon src/worker.ts",
-    "workflow": "ts-node src/client.ts"
+    "greeting": "ts-node src/clients/greeting.ts",
+    "farewell": "ts-node src/clients/farewell.ts"
   },
   "nodemonConfig": {
     "execMap": {
