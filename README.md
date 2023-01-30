@@ -1,6 +1,6 @@
 # Code Repository for Temporal 101 (TypeScript)
 This repository provides code used for exercises and demonstrations
-included in the TypeScript version of the [Temporal 101]() training course.
+included in the TypeScript version of the [Temporal 101](https://github.com/temporalio/edu-101-typescript-content) training course.
 
 
 ## Hands-On Exercises
@@ -16,7 +16,7 @@ Directory Name                | Exercise
 ## Instructor-Led Demonstrations
 Directory Name                         | Description
 :------------------------------------- | :----------------------------------------------------------------------------------
-`demos/service-workflow`                | Shows a Workflow that uses a microservice](demos/service-workflow)
+`demos/service-workflow`                | [Shows a Workflow that uses a microservice](demos/service-workflow)
 
 
 ## Examples for Self-Study

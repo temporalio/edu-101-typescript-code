@@ -74,7 +74,7 @@ If you have time, continue with the optional part of the exercise below to see h
 You can run the following command to display the result of a Workflow Execution: 
 
 ```
-tctl workflow show --workflow_id <workflow_id>
+tctl workflow show --workflow_id <your_workflow_id>
 ```
 
 It is also possible, and often more convenient, to view this information using the Web UI. You will have a chance to do this in the next exercise.

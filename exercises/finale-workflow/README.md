@@ -15,13 +15,13 @@ TypeScript program.
 In one terminal, run the following command:
 
 ```
-$ java -classpath \
-   java-activity-and-worker.jar \
-   io.temporal.training.PdfCertWorker
+java -classpath \
+java-activity-and-worker.jar \
+io.temporal.training.PdfCertWorker
 ```
 
 # Install your Dependencies (Node.js)
-In another terminal, install your program dependecies with the command: 
+In another terminal, install your program dependencies with the following command: 
 
 ```command
 npm install
