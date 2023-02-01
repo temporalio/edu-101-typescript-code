@@ -7,8 +7,8 @@ async function run() {
   const client = new Client();
   const handle = await client.workflow.start(greeting, {
     taskQueue: 'greeting-tasks',
-    workflowId: "workflow-" + uuid4(),
-    args: ["Tina"],
+    workflowId: 'workflow-' + uuid4(),
+    args: ['Tina'],
   });
   return await handle.result();
 } 

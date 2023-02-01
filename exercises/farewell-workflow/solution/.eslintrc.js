@@ -23,6 +23,8 @@ module.exports = {
 
     // code style preference
     'object-shorthand': ['error', 'always'],
+    'semi': ['error', 'always',  {'omitLastInOneLineBlock': true}],
+    'quotes': ['error', 'single'],
 
     // relaxed rules, for convenience
     '@typescript-eslint/no-unused-vars': [
