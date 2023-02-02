@@ -6,7 +6,7 @@ import { uuid4 } from '@temporalio/workflow';
 async function run() {
   const client = new Client();
   const handle = await client.workflow.start(greeting, {
-    args: ['Tina'],
+    args: ['Tina'], 
     taskQueue: 'translation-tasks',
     workflowId: 'workflow-' + uuid4(),
   });

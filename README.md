@@ -22,14 +22,14 @@ Directory Name                         | Description
 ## Examples for Self-Study
 Directory Name                         | Description
 :------------------------------------- | :----------------------------------------------------------------------------------
-`samples/greeting`                     | (In progress) [The Go function with business logic for first Workflow]()
-`samples/retry-policy`                 | (In progress) [Example of a Workflow that has a custom Retry Policy]()
+`samples/retry-policy`                 | [Example of a Workflow that has a custom Retry Policy](./samples/retry-policy)
 
 
 ## Reference
 The following links provide additional information that you may find helpful as you work through this course.
 * [General Temporal Documentation](https://docs.temporal.io/)
 * [Temporal TypeScript Developer's Guide](https://docs.temporal.io/application-development?lang=typescript)
+* [Temporal TypeScript SDK API Reference](https://typescript.temporal.io/)
 * [TypeScript Language Documentation](https://www.typescriptlang.org/)
 * [GitPod Documentation: Troubleshooting](https://www.gitpod.io/docs/troubleshooting)
 
