@@ -5,7 +5,7 @@ async function run() {
   const worker = await Worker.create({
     workflowsPath: require.resolve('./workflows'),
     activities,
-    taskQueue: 'translations-tasks',
+    taskQueue: 'translation-tasks',
   });
 
   await worker.run();
