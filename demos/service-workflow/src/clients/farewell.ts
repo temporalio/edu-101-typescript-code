@@ -10,7 +10,7 @@ async function run() {
     workflowId: 'workflow-' + uuid4(),
   });
   return await handle.result();
-} 
+}
 
 run().catch((err) => {
   console.error(err);

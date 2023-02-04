@@ -6,6 +6,7 @@
     "build": "tsc --build",
     "build.watch": "tsc --build --watch",
     "lint": "eslint .",
+    "format": "prettier --write .",
     "server": "ts-node src/server.ts",
     "dev-server": "nodemon src/server.ts",
     "start": "ts-node src/worker.ts",
@@ -41,6 +42,7 @@
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-deprecation": "^1.2.1",
     "nodemon": "^2.0.12",
+    "prettier": "^2.8.3",
     "ts-node": "^10.8.1",
     "typescript": "^4.9.4"
   }
