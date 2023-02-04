@@ -6,7 +6,7 @@ Before continuing, kill all Worker instances still running from previous exercis
 
 ### Install the Project Dependencies
 
-Install the Node.js dependenices with the following command:
+Install the Node.js dependencies with the following command:
 
 ```command
 $ npm install
@@ -17,25 +17,25 @@ $ npm install
 Since this Workflow depends on the translation microservice, start that
 first by running this command in a terminal window:
 
-```
-$ npm run dev-server
+```command
+$ npm run service.watch
 ```
 
 Next, use a separate terminal window to start the Worker:
 
-```
-$ npm run start.watch
+```command
+$ npm run worker.watch
 ```
 
-Finally, use another terminal window to start the Workflows. You can change the name passed to the greeting in the `src/clients/greeting.ts` file and in farewell in the `src/clients/farewell.ts` file.
+Finally, use another terminal window to start the Workflows. You can change the name passed to the greeting Workflow in the `src/clients/greeting.ts` file and to the farewell Workflow in the `src/clients/farewell.ts` file.
 
-To start the `greeting` workflow, run the command:
+To start the `greeting` Workflow, run the command:
 
 ```command
 $ npm run greeting
 ```
 
-To start the `greeting` workflow, run the command:
+To start the `farewell` Workflow, run the command:
 
 ```command
 $ npm run farewell

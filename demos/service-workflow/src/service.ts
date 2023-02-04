@@ -12,28 +12,31 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use('/get-spanish-greeting', (req: Request, res: Response) => {
-  if (Object.keys(req.query).length === 0) {
+  if (!req.query.name) {
     res.status(400);
     res.send(
       'Missing required name parameter. Please add ?name=tina to the end of the url.'
     );
-  } else {
-    const name = req.query.name;
-    res.status(200);
-    res.send(`¡Hola, ${name}!`);
+    return;
   }
+
+  const name = req.query.name;
+  res.status(200);
+  res.send(`¡Hola, ${name}!`);
 });
 
-app.use('/get-spanish-farwell', (req: Request, res: Response) => {
-  if (Object.keys(req.query).length === 0) {
+app.use('/get-spanish-farewell', (req: Request, res: Response) => {
+  if (!req.query.name) {
     res.status(400);
     res.send(
       'Missing required name parameter. Please add ?name=tina to the end of the url.'
     );
-    const name = req.query.name;
-    res.status(200);
-    res.send(`¡Adios, ${name}!`);
+    return;
   }
+
+  const name = req.query.name;
+  res.status(200);
+  res.send(`¡Adios, ${name}!`);
 });
 
 app.use(notFound);
@@ -52,8 +55,5 @@ function errorHandler(err: Error, req: Request, res: Response) {
 
 app
   .listen(port)
-  .on('error', console.error.bind(console))
-  .on(
-    'listening',
-    console.log.bind(console, `Listening on http://localhost:${port}`)
-  );
+  .on('error', (e) => console.error(e))
+  .on('listening', () => console.log(`Listening on http://localhost:${port}`));
