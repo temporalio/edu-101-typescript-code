@@ -37,7 +37,7 @@ The `activities.ts` file contains a function (`getSpanishGreeting`) that uses a 
 All commands below must be run from the `practice` subdirectory.
 
 1. Install your dependencies with `npm install` in a terminal
-1. Start the microservice by running `npm run dev-server`
+1. Start the microservice by running `npm run service.watch`
 1. In another terminal, start your Worker by running `npm run start.watch`
 1. In a third terminal, execute your Workflow by running `npm start workflow` (replacing `Tina` with your own name)
 
