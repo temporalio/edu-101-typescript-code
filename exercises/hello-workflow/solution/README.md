@@ -13,6 +13,6 @@ The [Hello World Tutorial](https://docs.temporal.io/typescript/hello-world/) wal
 
 The Workflow should return:
 
-```bash
+```command
 Hello, Temporal!
 ```

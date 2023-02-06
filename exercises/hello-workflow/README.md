@@ -52,8 +52,8 @@ N
 1. Go to a terminal window in the environment and change to the `exercises/hello-workflow/practice/src` subdirectory for this exercise
 2. Run the following command to start the Worker:
 
-```
-$ npm run start.watch
+```command
+npm run start.watch
 ```
 
 ## Part E: Start the Workflow from the Command Line
@@ -61,8 +61,8 @@ $ npm run start.watch
 1. Open another terminal window in the environment and change to the `exercises/hello-workflow/practice/src` subdirectory. 
 2. Run the following command:
 
-```
-$ npm run workflow
+```command
+npm run workflow
 ```
 
 This command starts the Workflow, shows the Workflow's unique identifer, and prints the result of the `greeting` Activity. 
@@ -73,7 +73,7 @@ If you have time, continue with the optional part of the exercise below to see h
 ## Part F (Optional): Display the Result
 You can run the following command to display the result of a Workflow Execution: 
 
-```
+```command
 tctl workflow show --workflow_id <your_workflow_id>
 ```
 
