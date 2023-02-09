@@ -1,7 +1,10 @@
 {
     "markdown.styles": ["style.css"],
+    "pdf-preview.default.sidebar": true,
     "workbench.startupEditor": "none",
     "workbench.editorAssociations": 
-
+        {
+            "README.md": "vscode.markdown.preview.editor",
+        }
 }
 

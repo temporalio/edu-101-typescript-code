@@ -31,7 +31,7 @@ The `activities.ts` file contains a function (`getSpanishGreeting`) that uses a 
 ## Part C: Create a Client to Start Your New Activity
 1. Open the `farewell.ts` file (located in the `practice/src/clients` subdirectory) in the editor
 1. Update the import statement to get the name of your new Workflow
-1. Update the `client.workflow.start` function to have the name of your ne w Workflow as the the first parameter.  
+1. Update the `client.workflow.execute` function to have the name of your new Workflow as the the first parameter.  
 
 ## Part D: Start the Microservice and Run the Workflow
 All commands below must be run from the `practice` subdirectory.
@@ -39,7 +39,7 @@ All commands below must be run from the `practice` subdirectory.
 1. Install your dependencies with `npm install` in a terminal
 1. Start the microservice by running `npm run service.watch`
 1. In another terminal, start your Worker by running `npm run start.watch`
-1. In a third terminal, execute your Workflow by running `npm start workflow` (replacing `Tina` with your own name)
+1. In a third terminal, change into the `exercises/farewell-workflow/practice` subdirectory and execute your Workflow by running `npm start workflow` (replacing `Tina` with your own name)
 
 If there is time remaining, experiment with Activity failures and retries 
 by stopping the microservice (press Ctrl-C in its terminal) and re-running 
