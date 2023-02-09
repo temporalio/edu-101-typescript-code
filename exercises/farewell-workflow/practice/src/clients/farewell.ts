@@ -1,6 +1,6 @@
 import { Client } from '@temporalio/client';
 import { randomUUID } from 'node:crypto';
-// TODO: modify the line below to use import the workflow name you created
+// TODO: modify the line below to import the workflow name you created
 import { "TODO" } from '../workflows';
 
 async function run() {

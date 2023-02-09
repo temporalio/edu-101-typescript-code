@@ -9,7 +9,7 @@ During this exercise, you will
 You will create and make your changes to the code in the `practice` subdirectory. If you need a hint or want to verify your changes, look at the complete version in the `solution` subdirectory.
 
 ## Part A: Set up a new project using the Temporal package initializer 
-1. Download the `hello-world` project using the command:
+1. Download the `hello-world` project using the following command:
 
 ```
 npx @temporalio/create@latest ./exercises/hello-workflow/practice
@@ -34,10 +34,35 @@ Would you like me to initialize a git repository for the project?
 N
 ```
 
+Once the project has been downloaded, you will see some suggestions for how to begin working with your Temporal Application.
+
+```command
+To begin development, install the Temporal CLI:
+
+  Mac: brew install temporal
+  Other: Download and extract the latest release from https://github.com/temporalio/cli/releases/latest
+
+Start Temporal Server:
+
+  temporal server start-dev
+
+Use Node version 16+:
+
+  Mac: brew install node@16
+  Other: https://nodejs.org/en/download/
+
+Then, in the project directory, using two other shells, run these commands:
+
+  npm run start.watch
+  npm run workflow
+```
+
+We cover these commands in this course, so there is no need for you to run them now. 
+
 ## Part B: Review the Workflow Business Logic
 
-1. Open the `activities.ts` file (located in the `practice/src` subdirectory) in the editor and review the business logic. 
-2. Open the `workflows.ts` file (located in the `practice/src` subdirectory) in the editor and review the `greet` constant. Take special care to look at the Start-to-Close Timeout option. 
+1. Open the `practice/src/activities.ts` file in the editor and review the business logic. 
+2. Open the `practice/src/workflows.ts` file in the editor and review the `greet` constant. Take special care to look at the Start-to-Close Timeout option. 
 
 
 ## Part C: Change the Task Queue Name for the Worker
@@ -76,6 +101,7 @@ You can run the following command to display the result of a Workflow Execution:
 ```command
 tctl workflow show --workflow_id <your_workflow_id>
 ```
+This command shows you a lot of information. We will cover this output later in the course. 
 
 It is also possible, and often more convenient, to view this information using the Web UI. You will have a chance to do this in the next exercise.
 
