@@ -38,8 +38,8 @@ All commands below must be run from the `practice` subdirectory.
 
 1. Install your dependencies with `npm install` in a terminal
 1. Start the microservice by running `npm run service.watch`
-1. In another terminal, start your Worker by running `npm run start.watch`
-1. In a third terminal, change into the `exercises/farewell-workflow/practice` subdirectory and execute your Workflow by running `npm start workflow` (replacing `Tina` with your own name)
+1. In another terminal, start your Worker by running `npm run worker.watch`
+1. In a third terminal, change into the `exercises/farewell-workflow/practice` subdirectory and execute your Workflow by running `npm run farewell` (replacing `Tina` with your own name)
 
 If there is time remaining, experiment with Activity failures and retries 
 by stopping the microservice (press Ctrl-C in its terminal) and re-running 
