@@ -36,7 +36,7 @@ app.use('/get-spanish-farewell', (req: Request, res: Response) => {
 
   const name = req.query.name;
   res.status(200);
-  res.send(`¡Adios, ${name}!`);
+  res.send(`¡Adiós, ${name}!`);
 });
 
 app.use(notFound);
