@@ -9,7 +9,7 @@ async function run() {
     taskQueue: 'translation-tasks',
     workflowId: 'workflow-' + randomUUID(),
   });
-  console.log(`The farewel Workflow returned: ${result}`);
+  console.log(`The farewell Workflow returned: ${result}`);
 }
 
 run().catch((err) => {
