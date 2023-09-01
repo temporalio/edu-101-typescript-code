@@ -1,7 +1,6 @@
 import { proxyActivities } from '@temporalio/workflow';
 import type * as activities from './activities';
 
-
 const { getSpanishGreeting, getSpanishFarewell } = proxyActivities<
   typeof activities
 >({
@@ -15,14 +14,3 @@ export async function greeting(name: string): Promise<string> {
   const helloGoodbye = "\n" + greeting + "\n" + farewell;
   return helloGoodbye;
 }
-
-
-
-
-
-
-
-
-
-
-
