@@ -8,13 +8,15 @@ const { getSpanishGreeting } = proxyActivities<
   startToCloseTimeout: '10 seconds',
 });
 
-export async function greeting(name: string): Promise<string> {
-  const response = await getSpanishGreeting(name);
-  return response;
-}
-
 // TODO: write an exportable function that uses a Promise to return the response from your Activity
-
+export async function greeting(name: string): Promise<string> {
+  const greeting = await getSpanishGreeting(name);
+  let farewell = "";
+  // TODO: uncomment the line below and change it to execute the Activity function you created
+  // farewell = await getSpanishFarewell(name);
+  const helloGoodbye = "\n" + greeting + "\n" + farewell;
+  return helloGoodbye;
+}
 
 
 

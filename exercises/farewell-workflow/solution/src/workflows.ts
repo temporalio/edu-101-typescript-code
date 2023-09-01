@@ -8,11 +8,9 @@ const { getSpanishGreeting, getSpanishFarewell } = proxyActivities<
 });
 
 export async function greeting(name: string): Promise<string> {
-  const response = await getSpanishGreeting(name);
-  return response;
-}
-
-export async function farewell(name: string): Promise<string> {
-  const response = await getSpanishFarewell(name);
-  return response;
+  const greeting = await getSpanishGreeting(name);
+  let farewell = "";
+  farewell = await getSpanishFarewell(name);
+  const helloGoodbye = "\n" + greeting + "\n" + farewell;
+  return helloGoodbye;
 }
