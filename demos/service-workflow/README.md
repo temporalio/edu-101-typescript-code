@@ -27,7 +27,7 @@ Next, use a separate terminal window to start the Worker:
 npm run worker
 ```
 
-inally, use another terminal window to start the Workflow,
+Finally, use another terminal window to start the Workflow,
 using the supplied code, specifying your name as input.
 
 ```command
