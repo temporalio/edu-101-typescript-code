@@ -6,7 +6,7 @@
     "build": "tsc --build",
     "build.watch": "tsc --build --watch",
     "lint": "eslint .",
-    "format": "prettier --write .",
+    "format": "prettier --config .prettierrc 'src/**/*.ts' --write",
     "service": "ts-node src/service.ts",
     "service.watch": "nodemon src/service.ts",
     "worker": "ts-node src/worker.ts",
@@ -24,18 +24,18 @@
     ]
   },
   "dependencies": {
-    "@temporalio/activity": "^1.5.2",
-    "@temporalio/client": "^1.5.2",
-    "@temporalio/worker": "^1.5.2",
-    "@temporalio/workflow": "^1.5.2",
-    "axios": "^1.2.3",
-    "body-parser": "^1.20.1",
-    "express": "^4.18.2"
+    "@temporalio/activity": "~1.8.0",
+    "@temporalio/client": "~1.8.0",
+    "@temporalio/worker": "~1.8.0",
+    "@temporalio/workflow": "~1.8.0",
+    "axios": "^1.4.0",
+    "express": "^4.18.2",
+    "nanoid": "3.x"
   },
   "devDependencies": {
-    "@tsconfig/node16": "^1.0.0",
+    "@tsconfig/node18": "^1.0.0",
+    "@types/node": "^18.11.43",
     "@types/express": "^4.17.16",
-    "@types/node": "^16.11.43",
     "@typescript-eslint/eslint-plugin": "^5.0.0",
     "@typescript-eslint/parser": "^5.0.0",
     "eslint": "^7.32.0",
