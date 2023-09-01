@@ -6,9 +6,6 @@ const { CreatePdf } = proxyActivities({
 
 // The CertificateGeneratorWorkflow workflow calls the CreatePdf activity
 export async function CertificateGeneratorWorkflow(name: string): Promise<string> {
-  
-// CreatePdf is the Activity Type defined in the implementation of the Java Activity code
+  // CreatePdf is the Activity Type defined in the implementation of the Java Activity code
   return await CreatePdf(name);
 }
-
-
