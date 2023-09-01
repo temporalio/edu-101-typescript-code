@@ -14,7 +14,7 @@ TypeScript program.
 # Start the Worker (Java)
 In one terminal, run the following command:
 
-```
+```command
 java -classpath \
 java-activity-and-worker.jar \
 io.temporal.training.PdfCertWorker
@@ -26,6 +26,14 @@ In another terminal, install your program dependencies with the following comman
 ```command
 npm install
 ```
+
+# Run the Workflow Worker (implemented in TypeScript):
+In another terminal, run this command:
+
+```command
+npm run worker
+```
+
 
 # Edit the Workflow (TypeScript)
 Open the `client.ts` file, and change the argument passed to the workflow from 'Maxim Fateev' to your name. 
