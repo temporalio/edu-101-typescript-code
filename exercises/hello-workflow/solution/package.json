@@ -8,6 +8,7 @@
     "lint": "eslint .",
     "start": "ts-node src/worker.ts",
     "start.watch": "nodemon src/worker.ts",
+    "format": "prettier --config .prettierrc 'src/**/*.ts' --write",
     "workflow": "ts-node src/client.ts"
   },
   "nodemonConfig": {
