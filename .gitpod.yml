@@ -1,5 +1,17 @@
 image: gitpod/workspace-full:2023-01-16-03-31-28
 tasks:
+  - name: Temporal Local Development Server
+    init: |
+      pushd temporal-server
+      docker-compose pull
+      popd
+      gp sync-done dockerpull
+    command: |
+      source /workspace/edu-101-typescript-code/.bash_aliases
+      gp sync-await dockerpull
+      cd temporal-server
+      docker-compose up
+    openMode: tab-after
   - name: Worker
     init: cp .bash_aliases ~/.bash_aliases   # ensure new terminals also have access to tctl
     command: |
@@ -21,18 +33,6 @@ tasks:
       echo "Use this terminal to run the microservice in lesson 3.."
       source /workspace/edu-101-typescript-code/.bash_aliases
     openMode: split-right
-  - name: Temporal Local Development Server
-    init: |
-      pushd temporal-server
-      docker-compose pull
-      popd
-      gp sync-done dockerpull
-    command: |
-      source /workspace/edu-101-typescript-code/.bash_aliases
-      gp sync-await dockerpull
-      cd temporal-server
-      docker-compose up
-    openMode: tab-after
 ports:
   - name: postgres
     port: 5432
@@ -40,9 +40,9 @@ ports:
   - name: Temporal server
     port: 7233
     onOpen: ignore
-  - name: Temporal Web UI v2
+  - name: Temporal Web UI
     port: 8080 # temporal UI
-    description: New (v2) Temporal Web UI
+    description: Temporal Web UI
     onOpen: ignore
     visibility: private
   - name: Greeting Service
