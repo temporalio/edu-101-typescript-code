@@ -35,29 +35,7 @@ N
 ```
 
 Once the project has been downloaded, you will see some suggestions for how to begin working with your Temporal Application.
-
-```command
-To begin development, install the Temporal CLI:
-
-  Mac: brew install temporal
-  Other: Download and extract the latest release from https://github.com/temporalio/cli/releases/latest
-
-Start Temporal Server:
-
-  temporal server start-dev
-
-Use Node version 16+:
-
-  Mac: brew install node@16
-  Other: https://nodejs.org/en/download/
-
-Then, in the project directory, using two other shells, run these commands:
-
-  npm run start.watch
-  npm run workflow
-```
-
-We cover these commands in this course, so there is no need for you to run them now. 
+ 
 
 ## Part B: Review the Workflow Business Logic
 
