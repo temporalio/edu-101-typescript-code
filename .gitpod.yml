@@ -1,37 +1,38 @@
 image: gitpod/workspace-full:2023-01-16-03-31-28
 tasks:
-  - name: Set up aliases
-    init: cp .bash_aliases ~/.bash_aliases   # ensure new terminals also have access to tctl
-  - name: install staticcheck
-    init: go install honnef.co/go/tools/cmd/staticcheck@latest  # fix for 'Analysis Tools Missing' warning in status bar
-  - name: Go Get Fetcher # https://www.gitpod.io/docs/languages/go/#start-up-tasks
-    init: go get -v -t -d ./...
-  - name: Worker
+  - name: Temporal Local Development Server
     init: |
       pushd temporal-server
       docker-compose pull
       popd
-    command: |
       gp sync-done dockerpull
+    command: |
+      source /workspace/edu-101-typescript-code/.bash_aliases
+      gp sync-await dockerpull
+      cd temporal-server
+      docker-compose up
+    openMode: tab-after
+  - name: Worker
+    init: cp .bash_aliases ~/.bash_aliases   # ensure new terminals also have access to tctl
+    command: |
       echo "waiting for server...."
       gp ports await 7233 && gp ports await 8080 && sleep 25 && gp preview $(gp url 8080)
       clear
       echo "Use this terminal to start your worker."
       source ~/.bash_aliases
-  - name: Terminal
+  - name: Workflows
     command: |
       gp open README.md
       clear
-      echo "Use this terminal to run commands.."
+      echo "Use this terminal to run your workflows.."
       source ~/.bash_aliases
     openMode: split-right
-  - name: Temporal Local Development Server
+  - name: Service
     command: |
-      gp sync-await dockerpull
-      cd temporal-server
-      docker-compose up
-    openMode: tab-after
-
+      clear
+      echo "Use this terminal to run the microservice in lesson 3.."
+      source /workspace/edu-101-typescript-code/.bash_aliases
+    openMode: split-right
 ports:
   - name: postgres
     port: 5432
@@ -39,14 +40,9 @@ ports:
   - name: Temporal server
     port: 7233
     onOpen: ignore
-  - name: Temporal Web UI v2
+  - name: Temporal Web UI
     port: 8080 # temporal UI
-    description: New (v2) Temporal Web UI
-    onOpen: ignore
-    visibility: private
-  - name: Temporal Web UI v1
-    description: Old (v1) Temporal Web UI
-    port: 8088 # temporal legacy UI
+    description: Temporal Web UI
     onOpen: ignore
     visibility: private
   - name: Greeting Service
