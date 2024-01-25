@@ -27,7 +27,7 @@
     "@temporalio/client": "~1.8.0",
     "@temporalio/worker": "~1.8.0",
     "@temporalio/workflow": "~1.8.0",
-    "axios": "^1.4.0",
+    "axios": "^1.5.1",
     "express": "^4.18.2",
     "nanoid": "3.x"
   },
