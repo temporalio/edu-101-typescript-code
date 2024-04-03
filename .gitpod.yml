@@ -1,47 +1,58 @@
-image: gitpod/workspace-full:2023-01-16-03-31-28
+image: temporalio/gitpod-edu:1.2
 tasks:
-  - name: Temporal Local Development Server
+    # task links a bash configuration file to a location that is not
+    # specific to this course (/etc/bash.bashrc sources it from there)
+  - name: Shell configuration
     init: |
-      pushd temporal-server
-      docker-compose pull
-      popd
-      gp sync-done dockerpull
+      ln /workspace/edu-101-typescript-code/.bash.cfg /workspace/.bash.cfg
+      exit;
+    # task starts the Temporal Service via the CLI
+  - name: Temporal Local Development Server
     command: |
-      source /workspace/edu-101-typescript-code/.bash_aliases
-      gp sync-await dockerpull
-      cd temporal-server
-      docker-compose up
+      export TEMPORAL_NOTIFY_ON_NEW_VERSION=false
+      export TEMPORAL_CORS_ORIGINS=http://localhost:3000
+      temporal server start-dev \
+        --ui-port 8080 \
+        --db-filename /workspace/.cluster-persistence.db
     openMode: tab-after
-  - name: Worker
-    init: cp .bash_aliases ~/.bash_aliases   # ensure new terminals also have access to tctl
+  - name: Display Web UI
     command: |
-      echo "waiting for server...."
-      gp ports await 7233 && gp ports await 8080 && sleep 25 && gp preview $(gp url 8080)
-      clear
-      echo "Use this terminal to start your worker."
-      source ~/.bash_aliases
-  - name: Workflows
+      echo "Waiting for server...."
+      gp ports await 8080 && gp preview $(gp url 8080)
+      exit;
+  - name: Display Exercise Instructions
     command: |
       gp open README.md
-      clear
-      echo "Use this terminal to run your workflows.."
-      source ~/.bash_aliases
-    openMode: split-right
-  - name: Service
+      exit;
+  - name: Worker
     command: |
+      # use the original file path so that this won't depend on the 
+      # completion of the task above that links this elsewhere (the
+      # Docker image expects it in the same location for every course, 
+      # but this .gitpod.yml file can use course-specific paths)
+      source /workspace/edu-101-typescript-code/.bash.cfg
       clear
-      echo "Use this terminal to run the microservice in lesson 3.."
-      source /workspace/edu-101-typescript-code/.bash_aliases
+      echo "Use this terminal to start your Worker."
+  - name: Terminal
+    command: |
+      source /workspace/edu-101-typescript-code/.bash.cfg
+      clear
+      echo "Use this terminal to run commands.."
     openMode: split-right
+  - name: Microservice
+    command: |
+      source /workspace/edu-101-typescript-code/.bash.cfg
+      clear
+      echo "Use this terminal to start the microservice used in various activities."
+    openMode: split-right
+
+
 ports:
-  - name: postgres
-    port: 5432
-    onOpen: ignore
   - name: Temporal server
     port: 7233
     onOpen: ignore
   - name: Temporal Web UI
-    port: 8080 # temporal UI
+    port: 8080 # custom port, as per --ui-port option above
     description: Temporal Web UI
     onOpen: ignore
     visibility: private
@@ -55,10 +66,13 @@ vscode:
   extensions:
     - golang.Go
     - ms-python.python
+    - ms-python.debugpy
     - redhat.java
     - vscjava.vscode-java-test
     - vscjava.vscode-java-debug
     - wingrunr21.vscode-ruby
-    # - ms-toolsai.jupyter
-    # - ms-toolsai.jupyter-keymap
-    # - ms-toolsai.jupyter-renderers
+    - ms-toolsai.jupyter
+    - ms-toolsai.jupyter-keymap
+    - ms-toolsai.jupyter-renderers
+    - ms-toolsai.vscode-jupyter-cell-tags
+    - ms-toolsai.vscode-jupyter-slideshow
