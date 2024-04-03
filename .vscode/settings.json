@@ -1,10 +1,22 @@
 {
-    "markdown.styles": ["style.css"],
+    "go.alternateTools": {
+        "go": "/home/linuxbrew/.linuxbrew/bin/go",
+    },
+    "markdown.styles": [
+        "style.css"
+    ],
+    "terminal.integrated.defaultProfile.linux": "bash",
+    "terminal.integrated.profiles.linux": {
+        "bash": {
+            "path": "/usr/bin/bash",
+            "args": [
+                "-l"
+            ]
+        }
+    },
     "pdf-preview.default.sidebar": true,
     "workbench.startupEditor": "none",
-    "workbench.editorAssociations": 
-        {
-            "README.md": "vscode.markdown.preview.editor",
-        }
+    "workbench.editorAssociations": {
+        "README.md": "vscode.markdown.preview.editor"
+    }
 }
-
