@@ -71,13 +71,13 @@ npm run workflow
 This command starts the Workflow, shows the Workflow's unique identifer, and prints the result of the `greeting` Activity. 
 
 
-If you have time, continue with the optional part of the exercise below to see how to view the result using `tctl`.
+If you have time, continue with the optional part of the exercise below to see how to view the result using `temporal`.
 
 ## Part F (Optional): Display the Result
 You can run the following command to display the result of a Workflow Execution: 
 
 ```command
-tctl workflow show --workflow_id <your_workflow_id>
+temporal workflow show --workflow_id <your_workflow_id>
 ```
 This command shows you a lot of information. We will cover this output later in the course. 
 
