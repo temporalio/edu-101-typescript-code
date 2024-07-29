@@ -77,7 +77,7 @@ If you have time, continue with the optional part of the exercise below to see h
 You can run the following command to display the result of a Workflow Execution: 
 
 ```command
-temporal workflow show --workflow_id <your_workflow_id>
+temporal workflow show --workflow-id <your_workflow_id>
 ```
 This command shows you a lot of information. We will cover this output later in the course. 
 
