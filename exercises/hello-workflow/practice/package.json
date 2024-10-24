@@ -20,10 +20,10 @@
     ]
   },
   "dependencies": {
-    "@temporalio/activity": "~1.10.0",
-    "@temporalio/client": "~1.10.0",
-    "@temporalio/worker": "~1.10.0",
-    "@temporalio/workflow": "~1.10.0",
+    "@temporalio/activity": "^1.11.0",
+    "@temporalio/client":  "^1.11.0",
+    "@temporalio/worker":  "^1.11.0",
+    "@temporalio/workflow":  "^1.11.0",
     "@types/node-fetch": "^2.6.4",
     "nanoid": "^3.3.7",
     "node-fetch": "^2.6.2"
