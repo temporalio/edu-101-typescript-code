@@ -12,7 +12,11 @@ This will open a new tab containing a familiar VSCode-style interface. It may ta
 
 Eventually, the Codespace will display the readme for the repo in the top two-thirds of the screen, and a Temporal Service running on the command line in the bottom third of the screen:
 
+<<<<<<< HEAD
 ![3 — Loaded Codespace](https://raw.githubusercontent.com/temporalio/temporal-learning/refs/heads/main/static/courses/common/codespaces/3-loaded-codespace.png)
+=======
+![3 — Loaded Codespace](https://raw.githubusercontent.com/temporalio/temporal-learning/refs/heads/main/static/courses/common/codespaces/3-loaded-codespace.png)
+>>>>>>> c7326c8 (adds codespaces.md)
 
 There are two things you’ll want to do before getting started: open the Web UI, and open some terminal windows to work in.
 
@@ -57,3 +61,12 @@ You’re all set. Don’t forget that you can Ctrl+click on the links displayed 
 Your Codespace will automatically be stopped 30 minutes after you close the browser tab. This is to prevent excessive resource utilization. It can be resumed from the same part of the Github UI if needed, within 30 days of the last time it was used.
 
 ![12 — Resume Codespace](https://raw.githubusercontent.com/temporalio/temporal-learning/refs/heads/main/static/courses/common/codespaces/12-resume-codespace.png)
+
+### Delete Your Codespaces
+
+Once you are done with this course or the exercises, manually delete your codespaces. There are costs associated with storing codespaces. You should therefore delete any codespaces you no longer need. Here are the steps you need to take to delete your codespaces:
+
+1. Visit your codespaces page [here](https://github.com/codespaces).
+2. To the right of the codespace you want to delete, click the three dots, then click `Delete`:
+
+![Delete codespace](https://learn.temporal.io/courses/common/codespaces/13-delete-codespaces.png "Delete codespace")

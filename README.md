@@ -35,10 +35,9 @@ The following links provide additional information that you may find helpful as 
 * [Temporal TypeScript SDK API Reference](https://typescript.temporal.io/)
 * [TypeScript Language Documentation](https://www.typescriptlang.org/)
 
-
 ## Exercise Environment for this Course
+
 You can launch an exercise environment for this course using GitHub Codespaces by 
 following [this](codespaces.md) walkthrough.
 
-Alternatively, you can follow 
-[these instructions](https://learn.temporal.io/getting_started/typescript/hello_world_in_typescript/) to set up your own Temporal Cluster with Docker Compose, which you can use as an exercise environment.
+Alternatively, you can perform these exercises directly on your computer. Refer to the instructions about setting up a local development environment, which you'll find in the "About this Course" chapter.
