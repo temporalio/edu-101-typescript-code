@@ -39,9 +39,8 @@ Once the project has been downloaded, you will see some suggestions for how to b
 
 ## Part B: Review the Workflow Business Logic
 
-1. Open the `practice/src/activities.ts` file in the editor and review the business logic. 
-2. Open the `practice/src/workflows.ts` file in the editor and review the `greet` constant. Take special care to look at the Start-to-Close Timeout option. 
-
+1. Open the `workflows.ts` file (located in the `practice` subdirectory) in the editor.
+2. Review the input parameters, business logic, and return value. 
 
 ## Part C: Change the Task Queue Name for the Worker
 
@@ -68,8 +67,7 @@ npm run start.watch
 npm run workflow
 ```
 
-This command starts the Workflow, shows the Workflow's unique identifer, and prints the result of the `greeting` Activity. 
-
+This command starts the Workflow and prints the result. 
 
 If you have time, continue with the optional part of the exercise below to see how to view the result using `temporal`.
 
@@ -82,6 +80,5 @@ temporal workflow show --workflow-id <your_workflow_id>
 This command shows you a lot of information. We will cover this output later in the course. 
 
 It is also possible, and often more convenient, to view this information using the Web UI. You will have a chance to do this in the next exercise.
-
 
 ### This is the end of the exercise.
