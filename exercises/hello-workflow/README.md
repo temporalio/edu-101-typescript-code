@@ -32,15 +32,32 @@ npm run start.watch
 ## Part D: Start the Workflow from the Command Line
 
 1. Open another terminal window in the environment and change to the `exercises/hello-workflow/practice/src` subdirectory. 
-2. Run the following command:
+2. Run the following command, replacing `Donna` with your own name. Be sure to retain the same quoting shown here when you run the command:
 
-```command
-npm run workflow
+```
+temporal workflow start \
+    --type sayHelloWorkflow \
+    --task-queue greeting-tasks \
+    --workflow-id my-first-workflow \
+    --input '"Donna"'
 ```
 
-This command starts the Workflow and prints the result. 
+Notice the quoting for the input value, which has double quotes inside of single quotes. The input passed to the `temporal` command must be provided in JSON format and the quoting used here is necessary to pass the value through the shell and into the Workflow in the correct format.
+
+Note that this command starts the Workflow, but it does not wait for
+it to complete or show the result.
 
 If you have time, continue with the optional part of the exercise below to see how to view the result using `temporal`.
+
+### Using the CLI to Start a Workflow with Windows
+
+The mix of single and double quotes we currently have pertains to UNIX-style shells. However, If you are running the Temporal CLI in Windows (such as Powershell), you will need to use Windows-style quote escaping like this:
+
+```
+temporal workflow start --type sayHelloWorkflow --task-queue greeting-tasks --workflow-id my-first-workflow --input '\"Donna\"'
+```
+
+This is a general Windows approach for handling quotes in parameters, not something specific to Temporal.
 
 ## Part E (Optional): Display the Result
 You can run the following command to display the result of a Workflow Execution: 
