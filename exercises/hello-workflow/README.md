@@ -25,9 +25,17 @@ You'll need three terminal windows for this exercise.
 1. Open the `worker.ts` file (located in the `practice/src` subdirectory) in the editor
 2. Change the task queue name to `greeting-tasks`
 3. Save your changes
-4. Repeat this process in the `client.ts` file 
+4. Repeat this process in the `client.ts` file
 
-## Part C: Start the Worker
+## Part C: Install Dependencies
+
+1. Open a terminal window in your environment and navigate to the `exercises/hello-workflow/practice` subdirectory.
+2. Run the following command to install the required dependencies:
+```command
+npm install
+```
+
+## Part D: Start the Worker
 
 1. Go to a terminal window in the environment and make sure you are in the `exercises/hello-workflow/practice/src` subdirectory for this exercise
 2. Run the following command to start the Worker:
@@ -36,7 +44,7 @@ You'll need three terminal windows for this exercise.
 npm run start.watch
 ```
 
-## Part D: Start the Workflow from the Command Line
+## Part E: Start the Workflow from the Command Line
 
 1. Go to another terminal window in the environment and make sure you are in the `exercises/hello-workflow/practice/src` subdirectory. 
 2. Run the following command, replacing `Donna` with your own name. Be sure to retain the same quoting shown here when you run the command:
