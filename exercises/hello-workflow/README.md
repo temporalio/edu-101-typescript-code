@@ -8,6 +8,13 @@ During this exercise, you will
 
 You will create and make your changes to the code in the `practice` subdirectory. If you need a hint or want to verify your changes, look at the complete version in the `solution` subdirectory.
 
+## Setup
+
+You'll need three terminal windows for this exercise.
+
+1. In all terminals, change to the `exercises/hello-workflow/practice` directory.
+2. In one terminal, run `npm install` to install dependencies.
+
 ## Part A: Review the Workflow Business Logic
 
 1. Open the `workflows.ts` file (located in the `practice` subdirectory) in the editor.
@@ -22,7 +29,7 @@ You will create and make your changes to the code in the `practice` subdirectory
 
 ## Part C: Start the Worker
 
-1. Go to a terminal window in the environment and change to the `exercises/hello-workflow/practice/src` subdirectory for this exercise
+1. Go to a terminal window in the environment and make sure you are in the `exercises/hello-workflow/practice/src` subdirectory for this exercise
 2. Run the following command to start the Worker:
 
 ```command
@@ -31,7 +38,7 @@ npm run start.watch
 
 ## Part D: Start the Workflow from the Command Line
 
-1. Open another terminal window in the environment and change to the `exercises/hello-workflow/practice/src` subdirectory. 
+1. Go to another terminal window in the environment and make sure you are in the `exercises/hello-workflow/practice/src` subdirectory. 
 2. Run the following command, replacing `Donna` with your own name. Be sure to retain the same quoting shown here when you run the command:
 
 ```
