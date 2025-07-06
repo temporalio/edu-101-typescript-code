@@ -12,11 +12,7 @@ This will open a new tab containing a familiar VSCode-style interface. It may ta
 
 Eventually, the Codespace will display the readme for the repo in the top two-thirds of the screen, and a Temporal Service running on the command line in the bottom third of the screen:
 
-<<<<<<< HEAD
-![3 — Loaded Codespace](https://raw.githubusercontent.com/temporalio/temporal-learning/refs/heads/main/static/courses/common/codespaces/3-loaded-codespace.png)
-=======
 ![3 — Loaded Codespace](https://raw.githubusercontent.com/temporalio/temporal-learning/refs/heads/main/static/courses/common/codespaces/3-loaded-codespace.png)
->>>>>>> c7326c8 (adds codespaces.md)
 
 There are two things you’ll want to do before getting started: open the Web UI, and open some terminal windows to work in.
 
