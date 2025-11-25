@@ -29,8 +29,8 @@
     "@temporalio/worker":  "^1.11.0",
     "@temporalio/workflow":  "^1.11.0",
     "axios": "^1.4.0",
-    "body-parser": "^1.20.2",
-    "express": "^4.18.2",
+    "body-parser": "^2.2.1",
+    "express": "^5.1.0",
     "nanoid": "3.x"
   },
   "devDependencies": {
